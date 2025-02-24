@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContentControlExplorer.Base\ContentControlExplorer.Base.csproj" />
+    <ProjectReference Include="..\ContentControlExplorer.DataTemplateModel\ContentControlExplorer.DataTemplateModel.csproj" />
+    <ProjectReference Include="..\ContentControlExplorer.DataTemplateSelector\ContentControlExplorer.DataTemplateSelectorSample.csproj" />
+    <ProjectReference Include="..\ContentControlExplorer.DataTemplate\ContentControlExplorer.DataTemplate.csproj" />
+    <ProjectReference Include="..\ContentControlExplorer.StringFormat\ContentControlExplorer.StringFormat.csproj" />
+  </ItemGroup>
+
+</Project>
