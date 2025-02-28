@@ -9,19 +9,22 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <ContentControl x:Name="test" ContentStringFormat="{}{0:MM/dd/yyyy}">
-        <sys:DateTime>2004/3/4 13:6:55</sys:DateTime>
-    </ContentControl>
-    <!--<ContentControl
+    <Viewbox>
+
+        <ContentControl x:Name="test" ContentStringFormat="{}{0:MM/dd/yyyy}">
+            <sys:DateTime>2004/3/4 13:6:55</sys:DateTime>
+        </ContentControl>
+        <!--<ContentControl
         x:Name="test"
         ContentStringFormat="{}{0} km/s"
         Foreground="Black">
         123
     </ContentControl>-->
-    <!--<ContentControl
+        <!--<ContentControl
         x:Name="test"
         ContentStringFormat="{}{0}°C"
         Foreground="Black">
         123
     </ContentControl>-->
+    </Viewbox>
 </UserControl>

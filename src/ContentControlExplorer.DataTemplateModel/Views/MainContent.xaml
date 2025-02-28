@@ -9,103 +9,105 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Viewbox>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Width" Value="100" />
-                    <Setter Property="Height" Value="40" />
-                </Style>
-            </StackPanel.Resources>
-            <Button
-                Margin="5"
-                Background="Green"
-                Command="{Binding ChangeNormalCommand}"
-                Content="정상" />
-            <Button
-                Margin="5"
-                Background="orange"
-                Command="{Binding ChangeWarningCommand}"
-                Content="경고" />
-            <Button
-                Margin="5"
-                Background="red"
-                Command="{Binding ChangeErrorCommand}"
-                Content="위험" />
-        </StackPanel>
-        <ContentControl Grid.Row="1" Content="{Binding Log}">
-            <ContentControl.Resources>
-                <DataTemplate DataType="{x:Type md:NormalModel}">
-                    <Viewbox Width="24" Height="24">
-                        <Path
-                            Stroke="Green"
-                            StrokeEndLineCap="Round"
-                            StrokeStartLineCap="Round"
-                            StrokeThickness="2">
-                            <Path.Data>
-                                <GeometryGroup>
-                                    <EllipseGeometry
-                                        Center="10,10"
-                                        RadiusX="12"
-                                        RadiusY="12" />
-                                    <PathGeometry Figures="M8 12l3 3 5-5" />
-                                </GeometryGroup>
-                            </Path.Data>
-                        </Path>
-                    </Viewbox>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type md:WarningModel}">
-                    <Viewbox Width="24" Height="24">
-                        <Path
-                            Stroke="orange"
-                            StrokeEndLineCap="Round"
-                            StrokeStartLineCap="Round"
-                            StrokeThickness="2">
-                            <Path.Data>
-                                <GeometryGroup>
-                                    <EllipseGeometry
-                                        Center="10,10"
-                                        RadiusX="12"
-                                        RadiusY="12" />
-                                    <PathGeometry Figures="M12 8v4M12 16h.01" />
-                                </GeometryGroup>
-                            </Path.Data>
-                        </Path>
-                    </Viewbox>
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type md:ErrorModel}">
-                    <Viewbox Width="24" Height="24">
-                        <Path
-                            Stroke="red"
-                            StrokeEndLineCap="Round"
-                            StrokeStartLineCap="Round"
-                            StrokeThickness="2">
-                            <Path.Data>
-                                <GeometryGroup>
-                                    <EllipseGeometry
-                                        Center="10,10"
-                                        RadiusX="12"
-                                        RadiusY="12" />
-                                    <PathGeometry Figures="M9 9l6 6M15 9l-6 6" />
-                                </GeometryGroup>
-                            </Path.Data>
-                        </Path>
-                    </Viewbox>
-                </DataTemplate>
-            </ContentControl.Resources>
-            <ContentControl.ContentTemplate>
-                <DataTemplate DataType="{x:Type md:LogModel}">
-                    <StackPanel Background="Gray">
-                        <TextBlock Text="여기는 ContentControl 영역입니다" />
-                        <ContentControl Content="{Binding}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ContentControl.ContentTemplate>
-        </ContentControl>
-    </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Width" Value="100" />
+                        <Setter Property="Height" Value="40" />
+                    </Style>
+                </StackPanel.Resources>
+                <Button
+                    Margin="5"
+                    Background="Green"
+                    Command="{Binding ChangeNormalCommand}"
+                    Content="정상" />
+                <Button
+                    Margin="5"
+                    Background="orange"
+                    Command="{Binding ChangeWarningCommand}"
+                    Content="경고" />
+                <Button
+                    Margin="5"
+                    Background="red"
+                    Command="{Binding ChangeErrorCommand}"
+                    Content="위험" />
+            </StackPanel>
+            <ContentControl Grid.Row="1" Content="{Binding Log}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type md:NormalModel}">
+                        <Viewbox Width="24" Height="24">
+                            <Path
+                                Stroke="Green"
+                                StrokeEndLineCap="Round"
+                                StrokeStartLineCap="Round"
+                                StrokeThickness="2">
+                                <Path.Data>
+                                    <GeometryGroup>
+                                        <EllipseGeometry
+                                            Center="10,10"
+                                            RadiusX="12"
+                                            RadiusY="12" />
+                                        <PathGeometry Figures="M8 12l3 3 5-5" />
+                                    </GeometryGroup>
+                                </Path.Data>
+                            </Path>
+                        </Viewbox>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type md:WarningModel}">
+                        <Viewbox Width="24" Height="24">
+                            <Path
+                                Stroke="orange"
+                                StrokeEndLineCap="Round"
+                                StrokeStartLineCap="Round"
+                                StrokeThickness="2">
+                                <Path.Data>
+                                    <GeometryGroup>
+                                        <EllipseGeometry
+                                            Center="10,10"
+                                            RadiusX="12"
+                                            RadiusY="12" />
+                                        <PathGeometry Figures="M12 8v4M12 16h.01" />
+                                    </GeometryGroup>
+                                </Path.Data>
+                            </Path>
+                        </Viewbox>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type md:ErrorModel}">
+                        <Viewbox Width="24" Height="24">
+                            <Path
+                                Stroke="red"
+                                StrokeEndLineCap="Round"
+                                StrokeStartLineCap="Round"
+                                StrokeThickness="2">
+                                <Path.Data>
+                                    <GeometryGroup>
+                                        <EllipseGeometry
+                                            Center="10,10"
+                                            RadiusX="12"
+                                            RadiusY="12" />
+                                        <PathGeometry Figures="M9 9l6 6M15 9l-6 6" />
+                                    </GeometryGroup>
+                                </Path.Data>
+                            </Path>
+                        </Viewbox>
+                    </DataTemplate>
+                </ContentControl.Resources>
+                <ContentControl.ContentTemplate>
+                    <DataTemplate DataType="{x:Type md:LogModel}">
+                        <StackPanel Background="Gray">
+                            <TextBlock Text="여기는 ContentControl 영역입니다" />
+                            <ContentControl Content="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ContentControl.ContentTemplate>
+            </ContentControl>
+        </Grid>
+    </Viewbox>
 </UserControl>

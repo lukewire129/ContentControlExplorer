@@ -32,6 +32,8 @@
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
-    <ContentControl ContentTemplate="{StaticResource BMWTemplateContent}" />
+    <Viewbox>
+        <ContentControl ContentTemplate="{StaticResource BMWTemplateContent}" />
+    </Viewbox>
 </UserControl>
 

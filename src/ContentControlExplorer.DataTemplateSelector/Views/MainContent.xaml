@@ -44,8 +44,10 @@
             BTemplate="{StaticResource LukeTemplateContent}"
             EmptyTemplate="{StaticResource EmptyTemplateContent}" />
     </UserControl.Resources>
-    <StackPanel>
-        <TextBox x:Name="InputText" />
-        <ContentControl Content="{Binding ElementName=InputText, Path=Text}" ContentTemplateSelector="{StaticResource TemplateSelector}" />
-    </StackPanel>
+    <Viewbox>
+        <StackPanel>
+            <TextBox x:Name="InputText" />
+            <ContentControl Content="{Binding ElementName=InputText, Path=Text}" ContentTemplateSelector="{StaticResource TemplateSelector}" />
+        </StackPanel>
+    </Viewbox>
 </UserControl>

@@ -20,5 +20,8 @@
     </UserControl.Content>-->
     <!--<base:MainContent />-->
     <!--<stringformat:MainContent />-->
-    <datatemplatemodel:MainContent />
+    <!--<datatemplate:MainContent />-->
+    <!--<datatemplateselector:MainContent />-->
+    <!--<datatemplatemodel:MainContent />-->
+    <base:MainContent />
 </UserControl>
